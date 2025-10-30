@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tic Tac Toe — Interact</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Tic-Tac-Toe</h1>
+
+    <section class="controls">
+      <button id="createBtn">Create Game (Multiplayer)</button>
+      <input id="roomInput" placeholder="Room ID to join" />
+      <button id="joinBtn">Join Game</button>
+      <button id="local2PBtn">Local 2-Player</button>
+      <button id="vsAIBtn">Play vs CPU</button>
+    </section>
+
+    <section class="status" id="statusBox">
+      Status: <span id="statusText">not connected</span>
+    </section>
+
+    <section class="board" id="board">
+      <!-- 9 cells -->
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </section>
+
+    <section class="controls">
+      <button id="restartBtn">Restart</button>
+      <button id="leaveBtn">Leave Room</button>
+      <div class="legend">
+        Your symbol: <span id="mySymbol">-</span>
+      </div>
+    </section>
+
+    <footer>
+      <small>Multiplayer backed by Socket.IO • Local CPU uses Minimax</small>
+    </footer>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
